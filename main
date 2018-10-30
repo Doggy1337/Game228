@@ -9,7 +9,8 @@ int main()
 	setlocale(0,"");
 	int hp, dmg, ur_class, mana, dodge, crit_chance;
 	int chance, room;
-	int cobold_hp, cobold_dmg;
+	int cobold_hp;
+	int monster_dmg;
 	room=0;
 	cobold_hp=20;
 	cobold_dmg=5;
@@ -63,11 +64,12 @@ int main()
 		case 1:
 		if (chance<=10)
 		{
+		cout<<"Вы встретили кобольда. Он ведет себя очень агрессивно и нападает на вас! \n";
 			int battle_with_cobold()
 			{
 				while (hp!=0&&cobold_hp!=0)
 				{
-					cobold_dmg=5;
+					monster_dmg=5;
 					chance=rand()%100+1;
 					if (dodge>=chance)
 					{
@@ -81,7 +83,7 @@ int main()
 						cout<<"Критический удар \n";
 					}
 					cout<<"Вы нанесли кобольду "<<dmg<<" урона. У кобольда осталось "<<cobold_hp<<" здоровья \n";
-					cout<<"Кобольд нанес"<<cobold_dmg<<" урона. У вас осталось "<<hp<<" здоровья \n";
+					cout<<"Кобольд нанес"<<monster_dmg<<" урона. У вас осталось "<<hp<<" здоровья \n";
 					}
 					if (cobold_hp==0)
 					{
@@ -95,6 +97,8 @@ int main()
 			}
 		}
 		if (chance>10 && chance<=20)
+		{
+		
 		break;
 		case 2:
 			chance=rand()%(100+1);
