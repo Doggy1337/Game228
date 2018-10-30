@@ -68,7 +68,7 @@ int main()
 		cout<<"Вы встретили кобольда. Он ведет себя очень агрессивно и нападает на вас! \n";
 			int battle_with_cobold()
 			{
-				while (hp==0&&cobold_hp==0)
+				while (hp>0&&cobold_hp>0)
 				{
 					monster_dmg=5;
 					chance=rand()%100+1;
@@ -100,6 +100,7 @@ int main()
 		if (chance>10 && chance<=20)
 		{
 			cout<<"Вы встретили гоблина. Он даун и на вас заагрился \n";
+			
 		break;
 		case 2:
 			chance=rand()%(100+1);
