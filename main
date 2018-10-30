@@ -9,12 +9,8 @@ int main()
 	setlocale(0,"");
 	int hp, dmg, ur_class, mana, dodge, crit_chance;
 	int chance, room;
-	int cobold_hp;
-	int monster_dmg;
-	int goblin_hp;
+	int monster_dmg, monster_hp;
 	room=0;
-	goblin_hp=35;
-	cobold_hp=20;
 	cout<<"DUNGEONS Of RUBTID \n";
 	cout<<"------------------------------------------- \n";
 	cout<<"------------|-^---^-|---------------------- \n";
@@ -67,8 +63,9 @@ int main()
 		{
 			int battle_with_cobold()
 			{
-				while (hp>0&&cobold_hp>0)
-				{
+				while (hp>0&&monster_hp>0)
+				{	
+					monster_hp=20
 					monster_dmg=5;
 					chance=rand()%(100)+1;
 					if (dodge>=chance)
@@ -82,9 +79,9 @@ int main()
 						dmg=dmg*2;
 						cout<<"Критический удар \n";
 					}
-					cout<<"Вы нанесли кобольду "<<dmg<<" урона. У кобольда осталось "<<cobold_hp<<" здоровья \n";
-					cout<<"Кобольд нанес"<<monster_dmg<<" урона. У вас осталось "<<hp<<" здоровья \n";
-					if (cobold_hp==0)
+					cout<<"Вы нанесли кобольду "<<dmg<<" урона. У кобольда осталось "<<monster_hp<<" здоровья \n";
+					cout<<"Кобольд нанес "<<monster_dmg<<" урона. У вас осталось "<<hp<<" здоровья \n";
+					if (monster_hp==0)
 					{
 						cout<<"Вы победили! \n";
 					}
@@ -100,8 +97,9 @@ int main()
 			cout<<"Вы встретили гоблина. Он даун и заагрился на вас. \n";
 			int battle_with_goblin()
 			{
-				while (hp>0&&goblin_hp>0)
+				while (hp>0&&monster_hp>0)
 				{
+					monster_hp=35
 					monster_dmg=10;
 					chance=rand()%(100)+1;
 					if (dodge>=chance)
@@ -116,55 +114,29 @@ int main()
 						cout<<"Критический удар \n";
 					}
 				}
-				cout<<"Вы нанесли гоблину "<<dmg<<" урона. У гоблина осталось "<<goblin_hp<<" здоровья \n";
-				cout<<"Гоблин нанес"<<monster_dmg<<" урона. У вас осталось "<<hp<<" здоровья \n";
-					if (goblin_hp==0)
-					{
-						cout<<"Вы победили! \n";
-					}
-					else
-					{
-						cout<<"Вы долбань! \n";
-					}
+				cout<<"Вы нанесли гоблину "<<dmg<<" урона. У гоблина осталось "<<monster_hp<<" здоровья \n";
+				cout<<"Гоблин нанес "<<monster_dmg<<" урона. У вас осталось "<<hp<<" здоровья \n";
+				if (monster_hp==0)
+				{
+					cout<<"Вы победили! \n";
+				}
+				else
+				{
+					cout<<"Вы долбань! \n";
+				}
 			}
-		}
-					
-					
+		}				
 		break;
 		case 2:
 			chance=rand()%(100)+1;
 			if (chance<=15)
 			{
-				chance=rand()%(1)+1
-				while (hp!=0&&cobold_hp!=0)
-				{
-					monster_dmg=5;
-					chance=rand()%(100)+1;
-					if (dodge>=chance)
-					{
-						cobold_dmg=0;
-						cout<<"Вы увернулись \n";
-					}
-					chance=rand()%(100)+1;
-					if (crit_chance>=chance)
-					{
-						dmg=dmg*2;
-						cout<<"Критический удар \n";
-					}
-					cout<<"Вы нанесли кобольду "<<dmg<<" урона. У кобольда осталось "<<cobold_hp<<" здоровья \n";
-					cout<<"Кобольд нанес"<<cobold_dmg<<" урона. У вас осталось "<<hp<<" здоровья \n";
-					}
-					if (cobold_hp==0)
-					{
-						cout<<"Вы победили! \n";
-					}
-					else
-					{
-						cout<<"Вы долбань! \n";
-					}
-				}	
+				int battle_with_cobold()
 			}
 			else
+			{
+				
+			}
 	}
 }
 
