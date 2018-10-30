@@ -1,1 +1,70 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+int main()
+{
+
+	srand(time(NULL));
+	setlocale(0,"");
+	int hp, dmg, ur_class, mana, dodge, crit_chance;
+	int chance, room;
+	room=0;
+	cout<<"DUNGEONS Of RUBTID \n";
+	cout<<"------------------------------------------- \n";
+	cout<<"------------|-^---^-|---------------------- \n";
+	cout<<"------------|-0---0-|---------------------- \n";
+	cout<<"------------|--===--|---------------------- \n";
+	cout<<endl;
+	cout<<endl;
+	cout<<endl;
+	cout<<"Âû î÷íóëèñü â òåìíîì ïîäçåìåëüå. Ðÿäîì ñòîèò òàáëè÷êà ñ íàäïèñüþ 'Dungeons of Rubtid'. \n";
+	cout<<"Âû îñìîòðåëè ñåáÿ. Êòî æå Âû? 1-Âîèí, 2-Ìàã, 3-Âîð \n";
+	cin>>ur_class;
+ 	switch (ur_class)
+ 	{
+ 	case 1:
+ 		hp=200;
+ 		dmg=20;
+ 		mana=20;
+ 		dodge=10;
+ 		crit_chance=20;
+ 		break;
+ 	case 2:
+ 		hp=100;
+ 		dmg=10;
+ 		mana=200;
+ 		dodge=20;
+ 		crit_chance=10
+ 		break;
+ 	case 3:
+ 		hp=60;
+ 		dmg=20;
+ 		mana=60;
+ 		dodge=40;
+ 		crit_chance=40
+ 	default:
+	 	cout<<"Âû øòî, ÷èòàòü íå óìååòå?!?!??!?!? \n Áóäåòå èãðàòü çà ëîõà!!!! \n
+	 	hp=20
+	 	dmg=1
+	 	mana=10
+	 	dodge=2
+	 	crit_chance=2
+ 	}
+ 	cout<<"Âû âûáðàëè ñâîé êëàññ \n";
+ 	cout<<"×òî áóäåòå äåëàòü? 1 - ïîéòè äàëüøå, 2 - ïîïðîáîâàòü îòäîõíóòü â òåêóùåé êîìíàòå \n";
+	cin>>pass;
+	chance=(rand()%(20)+1)+room
+	switch (pass)
+	{
+		case 1:
+			if (chance<=10)
+			{
+				
+			}
+			break;
+		case 2:
+			
+	}
+}
 
