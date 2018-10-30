@@ -89,7 +89,7 @@ int main()
 			}
 			break;
 		case 2:
-			
+			chance=rand()%(100+1);
 	}
 }
 
