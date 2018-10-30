@@ -7,9 +7,11 @@ int main()
 
 	srand(time(NULL));
 	setlocale(0,"");
-	int hp, dmg, ur_class, mana, dodge, crit_chance;
+	int hp, max_hp, dmg, ur_class, mana, dodge, crit_chance;
 	int chance, room;
 	int monster_dmg, monster_hp;
+	int obnylaychiysya_chetchik;
+	obnylaychiysya_chetchik=1
 	room=0;
 	cout<<"DUNGEONS Of RUBTID \n";
 	cout<<"------------------------------------------- \n";
@@ -25,6 +27,7 @@ int main()
  	switch (ur_class)
  	{
  	case 1:
+		max_hp=200
  		hp=200;
  		dmg=20;
  		mana=20;
@@ -32,6 +35,7 @@ int main()
  		crit_chance=20;
  		break;
  	case 2:
+		max_hp=100
  		hp=100;
  		dmg=10;
  		mana=200;
@@ -39,6 +43,7 @@ int main()
  		crit_chance=10
  		break;
  	case 3:
+		max_hp=60
  		hp=60;
  		dmg=20;
  		mana=60;
@@ -46,6 +51,7 @@ int main()
  		crit_chance=40
  	default:
 	 	cout<<"Âû øòî, ÷èòàòü íå óìååòå?!?!??!?!? \n Áóäåòå èãðàòü çà ëîõà!!!! \n
+		max_hp=20
 	 	hp=20
 	 	dmg=1
 	 	mana=10
@@ -133,9 +139,17 @@ int main()
 			{
 				int battle_with_cobold()
 			}
-			else
+			if (chance>15)
 			{
-				
+				if ((max_hp-hp)<(hp+hp*0.2))
+				{
+					hp=max_hp;
+				}
+				else
+				{
+					hp=hp+hp*0.2;
+				}
+				cout<<"Вы хорошо отдохнули и восстановили свое здоровье. Теперь у вас "<<hp<<" хп"
 			}
 	}
 }
