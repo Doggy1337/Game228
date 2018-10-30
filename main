@@ -65,7 +65,7 @@ int main()
 		{
 			int battle_with_cobold()
 			{
-				while (hp!=0&&cobold_hp!=0)
+				while (hp>0&&cobold_hp>0)
 				{
 					cobold_dmg=5;
 					chance=rand()%(100)+1;
