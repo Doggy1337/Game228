@@ -9,7 +9,10 @@ int main()
 	setlocale(0,"");
 	int hp, dmg, ur_class, mana, dodge, crit_chance;
 	int chance, room;
+	int cobold_hp, cobold_dmg;
 	room=0;
+	cobold_hp=20;
+	cobold_dmg=5;
 	cout<<"DUNGEONS Of RUBTID \n";
 	cout<<"------------------------------------------- \n";
 	cout<<"------------|-^---^-|---------------------- \n";
@@ -58,9 +61,25 @@ int main()
 	switch (pass)
 	{
 		case 1:
+		int battle_with_cobold(){
 			if (chance<=10)
 			{
-				
+			while(hp!=0&&cobold_hp!=0){
+			cobold_dmg=5;
+			chance=rand()%100+1;
+			if(dodge>=chance){
+			cobold_dmg=0;
+			cout<<"Вы увернулись \n";}
+			chance=rand()%100+1;
+			if(crit_chance>=chance){
+			dmg=dmg*2
+			cout<<"Критический удар \n";}
+			cout<<"Вы нанесли кобольду "<<dmg<<"урона. У кобольда осталось "<<cobold_hp
+			cout<<"Кобольд нанес"<<cobold_dmg<<"урона.У вас осталось"<<
+			}
+			
+			
+			
 			}
 			break;
 		case 2:
