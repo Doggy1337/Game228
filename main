@@ -8,7 +8,7 @@ int main()
 	srand(time(NULL));
 	setlocale(0,"");
 	int hp, max_hp, dmg, ur_class, mana, max_mana, dodge, crit_chance;
-	int chance, room;
+	int chance, room, pass;
 	int monster_dmg, monster_hp;
 	room=0;
 	cout<<"DUNGEONS Of RUBTID \n";
@@ -25,7 +25,7 @@ int main()
  	switch (ur_class)
  	{
  	case 1:
-		max_hp=200
+		max_hp=200;
  		hp=200;
  		dmg=20;
  		mana=20;
@@ -34,13 +34,13 @@ int main()
  		crit_chance=20;
  		break;
  	case 2:
-		max_hp=100
+		max_hp=100;
  		hp=100;
  		dmg=10;
  		mana=200;
 		max_mana=200;
  		dodge=20;
- 		crit_chance=10
+ 		crit_chance=10;
  		break;
  	case 3:
 		max_hp=60
@@ -49,23 +49,23 @@ int main()
  		mana=60;
 		max_mana=60;
  		dodge=40;
- 		crit_chance=40
+ 		crit_chance=40;
  	default:
-	 	cout<<"Âû øòî, ÷èòàòü íå óìååòå?!?!??!?!? \n Áóäåòå èãðàòü çà ëîõà!!!! \n
-		max_hp=20
-	 	hp=20
-	 	dmg=1
-	 	mana=10
+	 	cout<<"Âû øòî, ÷èòàòü íå óìååòå?!?!??!?!? \n Áóäåòå èãðàòü çà ëîõà!!!! \n";
+		max_hp=20;
+	 	hp=20;
+	 	dmg=1;
+	 	mana=10;
 		max_mana=10;
-	 	dodge=2
-	 	crit_chance=2
+	 	dodge=2;
+	 	crit_chance=2;
  	}
  	cout<<"Âû âûáðàëè ñâîé êëàññ \n";
 	while (hp>0)
 	{
 		cout<<"×òî áóäåòå äåëàòü? 1 - ïîéòè äàëüøå, 2 - ïîïðîáîâàòü îòäîõíóòü â òåêóùåé êîìíàòå \n";
 		cin>>pass;
-		chance=(rand()%(20)+1)+room
+		chance=(rand()%(20)+1)+room;
 		switch (pass)
 		{
 			case 1:
@@ -73,7 +73,7 @@ int main()
 				{
 						while (hp>0&&monster_hp>0) \\битва с кобольдом
 						{	
-							monster_hp=20
+							monster_hp=20;
 							monster_dmg=5;
 							chance=rand()%(100)+1;
 							if (dodge>=chance)
@@ -140,7 +140,7 @@ int main()
 					cout<<"На вас напал монстр! \n"
 					while (hp>0&&monster_hp>0) \\битва с кобольдом
 						{	
-							monster_hp=20
+							monster_hp=20;
 							monster_dmg=5;
 							chance=rand()%(100)+1;
 							if (dodge>=chance)
@@ -177,7 +177,7 @@ int main()
 						hp=hp+hp*0.2;
 					}
 					mana=max_mana;
-					cout<<"Вы хорошо отдохнули и восстановили свое здоровье и ману. Теперь у вас "<<hp<<" хп и "<<mana<<" маны. \n"
+					cout<<"Вы хорошо отдохнули и восстановили свое здоровье и ману. Теперь у вас "<<hp<<" хп и "<<mana<<" маны. \n";
 				}
 		}
 	}
