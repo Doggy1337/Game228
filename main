@@ -71,7 +71,7 @@ int main()
 			case 1:
 				if (chance<=10)
 				{
-						while (hp>0&&monster_hp>0) \\битва с кобольдом
+						while (hp>0&&monster_hp>0) //битва с кобольдом
 						{	
 							monster_hp=20;
 							monster_dmg=5;
@@ -102,7 +102,7 @@ int main()
 				}
 				if (chance>10 && chance<==20)
 				{
-					cout<<"Вы встретили гоблина. Он даун и заагрился на вас. \n"; \\битва с гоблином
+					cout<<"Вы встретили гоблина. Он даун и заагрился на вас. \n"; //битва с гоблином
 						while (hp>0&&monster_hp>0)
 						{
 							monster_hp=35;
@@ -138,7 +138,7 @@ int main()
 				if (chance<=15)
 				{
 					cout<<"На вас напал монстр! \n"
-					while (hp>0&&monster_hp>0) \\битва с кобольдом
+					while (hp>0&&monster_hp>0) //битва с кобольдом
 						{	
 							monster_hp=20;
 							monster_dmg=5;
