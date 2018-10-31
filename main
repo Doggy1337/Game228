@@ -43,7 +43,7 @@ int main()
  		crit_chance=10;
  		break;
  	case 3:
-		max_hp=60
+		max_hp=60;
  		hp=60;
  		dmg=20;
  		mana=60;
@@ -98,9 +98,9 @@ int main()
 								cout<<"Вы долбань! \n";
 							}
 						}	
-					}
+					
 				}
-				if (chance>10 && chance<==20)
+				if (chance>10 && chance<=20)
 				{
 					cout<<"Вы встретили гоблина. Он даун и заагрился на вас. \n"; //битва с гоблином
 						while (hp>0&&monster_hp>0)
@@ -130,7 +130,6 @@ int main()
 						{
 							cout<<"Вы долбань! \n";
 						}
-					}
 				}				
 			break;
 			case 2:
@@ -179,8 +178,8 @@ int main()
 					mana=max_mana;
 					cout<<"Вы хорошо отдохнули и восстановили свое здоровье и ману. Теперь у вас "<<hp<<" хп и "<<mana<<" маны. \n";
 				}
+			}	
 		}
+	return 0;	
 	}
-	return 0;
-}
 
